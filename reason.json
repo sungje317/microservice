@@ -1,1 +1,1 @@
-{"Reason":{"0":"A","1":"B","2":"C","3":"D","4":"E","5":"F"},"name":{"0":"학력","1":"고향","2":"종교","3":"정책","4":"기타인맥","5":"가족"}}
+{"schema": {"fields":[{"name":"index","type":"integer"},{"name":"Reason","type":"string"},{"name":"name","type":"string"}],"primaryKey":["index"],"pandas_version":"0.20.0"}, "data": [{"index":0,"Reason":"A","name":"학력"},{"index":1,"Reason":"B","name":"고향"},{"index":2,"Reason":"C","name":"종교"},{"index":3,"Reason":"D","name":"정책"},{"index":4,"Reason":"E","name":"기타인맥"},{"index":5,"Reason":"F","name":"가족"}]}
