@@ -85,8 +85,8 @@ while datetime.datetime.now() < end_time :
 
         price = df["close"][0]
         volume = df["volume"][0]
-        diff = df["diff"][0]
-        percent = str(round(diff * 100 / price, 2))
+        diff = df["close"][0] - df["close"][1]
+        percent = str(round(diff * 100 / df["close"][1], 2))
         new_data.loc[index] = [code, name, Class, className, Subclass, subclassName, Reason, reasonName, price, volume, percent]
     with open('now_stock.json', 'w', encoding='utf-8') as file:
         new_data.to_json(file, force_ascii=False, orient='table')
