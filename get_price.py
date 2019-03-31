@@ -65,7 +65,7 @@ end_time = start_time + datetime.timedelta(hours=7)
 
 
 while datetime.datetime.now() < end_time :
-    new_data = pd.DataFrame(columns=['code', 'name', 'class', 'className', 'subclassName', 'subclass', 'reason', 'reasonName', 'price', 'volume', 'percent'])
+    new_data = pd.DataFrame(columns=['code', 'name', 'class', 'className', 'subclass', 'subclassName', 'reason', 'reasonName', 'price', 'volume', 'percent'])
     for index in range(stock_code.shape[0]):
         code = stock_code.loc[index]["StockCode"]
         name = stock_code.loc[index]["StockName"]
