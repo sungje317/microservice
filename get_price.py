@@ -33,17 +33,29 @@ def get_backdata(url):
     return df, False
 
 def get_class(Class, Subclass):
-    RealURL = APIURL + 'Class=' + Class + '&Subclass=' + Subclass
+    RealURL = CLASSAPI + 'Class=' + Class + '&Subclass=' + Subclass
     result = requests.get(RealURL, headers=HEADER)
     result = result.text
     result = json.loads(result)
     result = result[0]
     return result["Cname"], result["Sname"]
 
+def get_reason(Reason):
+    RealURL = REASONAPI + 'Reason=' + Reason
+    result = requests.get(RealURL, headers=HEADER)
+    result = result.text
+    result = json.loads(result)
+    try:
+        result = result[0]
+        return result["name"]
+    except:
+        return ""
+
 TEMP = "/home/ubuntu/microservice/"
 TEMP = "/Users/parksang-yeon/microservice/"
 AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36"
-APIURL = 'http://133.186.146.218:8000/class/data?'
+CLASSAPI = 'http://133.186.146.218:8000/class/data?'
+REASONAPI = 'http://133.186.146.218:8000/reason/data?'
 HEADER = {'user-agent':AGENT, 'apikey':'vSBA8hHLWw6Nm8ynJC4CbsOkcdIGjHia'}
 
 stock_code = pd.read_csv(TEMP+"stock_code.csv", dtype=str)
@@ -53,16 +65,18 @@ end_time = start_time + datetime.timedelta(hours=7)
 
 
 while datetime.datetime.now() < end_time :
-    new_data = pd.DataFrame(columns=['code', 'name', 'className', 'subclassName', 'price', 'volume', 'percent'])
+    new_data = pd.DataFrame(columns=['code', 'name', 'class', 'className', 'subclassName', 'subclass', 'reason', 'reasonName', 'price', 'volume', 'percent'])
     for index in range(stock_code.shape[0]):
         code = stock_code.loc[index]["StockCode"]
         name = stock_code.loc[index]["StockName"]
         Class = stock_code.loc[index]["Class"]
         Subclass = stock_code.loc[index]["Subclass"]
+        Reason = stock_code.loc[index]["Reason"]
 
         print(name)
 
         className, subclassName = get_class(Class, Subclass)
+        reasonName = get_reason(Reason)
 
         url = get_url(code)
         df, empty = get_backdata(url)
@@ -73,6 +87,6 @@ while datetime.datetime.now() < end_time :
         volume = df["volume"][0]
         diff = df["diff"][0]
         percent = str(round(diff * 100 / price, 2))
-        new_data.loc[index] = [code, name, className, subclassName, price, volume, percent]
+        new_data.loc[index] = [code, name, Class, className, Subclass, subclassName, Reason, reasonName, price, volume, percent]
     with open('now_stock.json', 'w', encoding='utf-8') as file:
         new_data.to_json(file, force_ascii=False, orient='table')
