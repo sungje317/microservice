@@ -19,3 +19,8 @@ data = pd.read_csv('reason.csv', dtype=str)
 
 with open('reason.json','w',encoding='utf-8') as file:
     data.to_json(file, force_ascii=False, orient='table')
+
+data = pd.read_csv('poll.csv', dtype=str)
+
+with open('poll.json','w',encoding='utf-8') as file:
+    data.to_json(file, force_ascii=False, orient='table')
