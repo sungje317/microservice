@@ -1,3 +1,8 @@
-Democratic,Liberty,Justice,Future,Peace,Etc,None
-36.6,31.7,6.9,5.9,2.1,1.7,15.1
-38.9,31.3,7.6,5.1,2.6,1.7,12.8
+party,preSupport,postSupport
+Democratic,36.6,38.9
+Liberty,31.7,31.3
+Justice,6.9,7.6
+Future,5.9,5.1
+Peace,2.1,2.6
+Etc,1.7,1.7
+None,15.1,12.8
