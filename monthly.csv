@@ -1,7 +1,7 @@
 Class1,Class2,Class3,Date,Contents,Url,Stock
 N,EV,0,190409,아프리카 돼지열병 정부 합동 담화문 발표,https://cnbc.sbs.co.kr/article/10000937379?division=NAVER,018620/073560
-W,AI,0,190418,미세먼지 저감 현장방문 결과,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=018&aid=0004353018,044340/045520/187790/066130/071460/002700/037070/016920/002720/012690/045060/065950/083550/006890/014580/083660/104040
-N,EV,0,190417,4월 17일 시행 예정인 규제자유특구 제도를 통해 로봇 산업 육성을 추진하는 지자체에 규제 샌드박스 적용,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=014&aid=0004198532,215100/108490/090710/090360/056080140670/049950/117730
+W,AI,0,190418,미세먼지 저감 현장방문 결과,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=018&aid=0004353018,044340/045520/187790
+N,EV,0,190417,4월 17일 시행 예정인 규제자유특구 제도를 통해 로봇 산업 육성을 추진하는 지자체에 규제 샌드박스 적용,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=014&aid=0004198532,215100/108490/090710
 E,MU,0,190417,BTS 글로벌 기자 간담회,https://entertain.naver.com/read?oid=108&aid=0002776205,026890/061970/060570/054780/251270
 N,EV,0,190415,원전해체연구소 설립 MOU 체결 및 원전 해체산업 육성전략 마련을 위한 간담회 개최,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=018&aid=0004353860,046120/032820
 N,NK,I,190425,푸틴 일대일로 포럼 참석 - 김정은도 만날 듯,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=104&oid=023&aid=0003440722,039610/044060/008970
@@ -9,3 +9,5 @@ B,DI,0,190422,일본 돼지콜레라...1천900마리 살처분,https://news.nave
 E,MO,0,190424,어벤져스 개봉,http://www.cnbnews.com/news/article.html?no=407513,063440/056080/036420
 C,RE,0,190426,갤럭시폴드 미국출시,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=215&aid=0000762436,290550/090460/051370
 W,AI,0,190425,미세먼지 추경,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=100&oid=002&aid=0002088307,119650/104460/065950
+N,PO,FC,190425,이낙연 국무총리 수소연료전지 지역혁신센터 방문,http://www.nspna.com/news/?mode=view&newsid=354208,126880/095190/038870
+N,EV,0,190426,이낙연 국무총리 LG화학 배터리 공장 방문,https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=008&aid=0004207050,051490
